@@ -12,15 +12,15 @@ public class YearlySales {
         return calculateAll(salesForYear) / salesForYear.length;
     }
     public long calculateBest(long[] salesForYear) { // Наибольшее значение по массиву
-        int minMonth = 0;
+        int maxMonth = 0;
         int month = 0;
         for (long sale : salesForYear) {
-            if (sale >= salesForYear[minMonth]) {
-                minMonth = month;
+            if (sale >= salesForYear[maxMonth]) {
+                maxMonth = month;
             }
             month = month + 1;
         }
-        return minMonth + 1;
+        return maxMonth + 1;
     }
     public int calculateWorst(long[] salesForYear) {
         int minMonth = 0;
